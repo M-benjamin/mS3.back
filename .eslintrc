@@ -1,0 +1,53 @@
+{
+  "env": {
+    // enables ES6 syntax automatically
+    "es6": true,
+    // node.js global variables and node.js scoping
+    "node": true
+  },
+  // set of enabled rules from third party configurations
+  "extends": [
+    "eslint:recommended",
+    "airbnb-base",
+    // prevent issues with misspelling of file paths and import names
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  // replace esprima-compatible parser
+  "parser": "babel-eslint",
+  // javascript language options
+  "parserOptions": {
+    "ecmaVersion": 6,
+    // code in ECMAScript modules style
+    "sourceType": "module"
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  },
+  // specifying global allowing access
+  "globals": {
+    "process": true
+  },
+  "rules": {
+    "quotes": ["warn", "single"],
+    "semi": ["warn", "never"],
+    "indent": [
+      "warn",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "camelcase": "off",
+
+    "no-unused-vars": "warn",
+    "no-param-reassign": "warn",
+    "class-methods-use-this": "off",
+
+    "no-console": "warn",
+    "no-eval": "warn"
+  }
+  // More information here: https://eslint.org/docs/user-guide/configuring
+}
